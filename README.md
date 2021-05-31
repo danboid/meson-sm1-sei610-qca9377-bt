@@ -1,0 +1,1 @@
+# meson-sm1-sei610-qca9377-bt
