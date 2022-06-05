@@ -1,16 +1,22 @@
 # meson-sm1-sei610-qca9377-bt
 
 This is a Linux dts/dtb which supports the following hardware on Amlogic TV
-S905X3 based boxes such as the X96 Air Q1000:
+S905X3 based boxes such as the X96 Air Q1000 and the X96 Max Plus Q2.
 
 * WiFi
 * Gigabit ethernet
 * HDMI audio
 * Bluetooth
 
-The onboard audio of the X96 Air is not supported by this dts.
+The onboard analogue audio jack is not supported by this dts/dtb.
 
-It has been tested using the Manjaro ARM [linux-aml](https://gitlab.manjaro.org/manjaro-arm/packages/core/linux-aml) 5.12 kernel. 
+It has been tested using the Manjaro ARM [linux-aml](https://gitlab.manjaro.org/manjaro-arm/packages/core/linux-aml) 5.12 kernel.
+
+UPDATE JUNE 2022
+
+Bluetooth no longer works using meson-sm1-sei610-qca9377-bt.dtb with Manjaro ARM.
+
+You can get working bluetooth on the X96 Air Q1000 and X96 Max Plus Q2 by using meson-g12a-x96-max-plus-q2.dtb with [s9xxx Armbian](https://github.com/ophub/amlogic-s9xxx-armbian)
 
 ## Compilation
 
