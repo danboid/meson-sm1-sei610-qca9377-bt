@@ -12,14 +12,6 @@ The onboard analogue audio jack is not supported by this dts/dtb.
 
 It has been tested using the Manjaro ARM [linux-aml](https://gitlab.manjaro.org/manjaro-arm/packages/core/linux-aml) 5.12 kernel.
 
-# UPDATE JUNE 2022
-
-Bluetooth no longer works using meson-sm1-sei610-qca9377-bt.dtb with Manjaro ARM.
-
-You can get working onboard bluetooth for the X96 Air Q1000 and X96 Max Plus Q2 TV boxes by using meson-g12a-x96-max-plus-q2.dtb with a 5.15.x+ kernel running under one of the S905X3 builds of [s9xxx Armbian](https://github.com/ophub/amlogic-s9xxx-armbian). This dtb has most recently been tested with the Linux 5.15.45-flippy-73 kernel.
-
-meson-g12a-x96-max-plus-q2.dtb doesn't have working onboard ethernet when used with the Armbian 5.10.x kernels but WiFi and bluetooth both work with the Linux 5.10.120-flippy kernel.
-
 ## Compilation
 
 You can build the dtb yourself with `device-tree-compiler`:
@@ -27,3 +19,9 @@ You can build the dtb yourself with `device-tree-compiler`:
 ```
 $ dtc -O dtb -o meson-sm1-sei610-qca9377-bt.dtb meson-sm1-sei610-qca9377-bt.dts
 ```
+
+# UPDATE 8th JUNE 2022
+
+Bluetooth no longer works using meson-sm1-sei610-qca9377-bt.dtb with Manjaro ARM. I suspect there is an issue with the Manjaro bluez package(s)?
+
+You can get working onboard bluetooth for the X96 Air Q1000 and X96 Max Plus Q2 TV boxes by using the meson-sm1-x96-max-plus-q2.dtb which is now offered as an installation option by the s905X3 builds of [s9xxx Armbian](https://github.com/ophub/amlogic-s9xxx-armbian). Do not use the dtbs in this repo.
